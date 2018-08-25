@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.newtownx.user;
 
 /**
@@ -14,13 +11,18 @@ public class User {
 	String lastName;
 	
 	public User() {
-		this.firstName = null;
-		this.lastName = null;
 	}
 	
 	public User(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
+	}
+	
+	@Override
+	public String toString() {
+		return this.id + " -> "
+				+ this.lastName + ", "
+				+ this.firstName;
 	}
 
 	/**

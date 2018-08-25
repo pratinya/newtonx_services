@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.newtonx</groupId>
-	<artifactId>UserServicesApi</artifactId>
+	<artifactId>ServicesApi</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>UserServicesApi</name>
+	<name>ServicesApi</name>
 	<description>
 		RESTful API that implements some CRUD (create, read, update, destroy) operations on a "user" resource through HTTP requests, 
 		and returns JSON data where applicable
@@ -36,7 +36,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>UserServicesApi</finalName>
+		<finalName>services</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -47,5 +47,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
