@@ -1,48 +1,56 @@
-######
-#Project Title:RESTEasy WebService Application
+# NewtonX
+# Project Title:RESTEasy WebService Application
 
-#Motivation:Newtox back end assignment challenge
+# Motivation:Newtox back end assignment challenge
 
-#Technology/Framework Used
-#Technologies Used: Java 8,Jackson rest easy, Maven
+# Technology/Framework Used
+  Java 8,Jackson RESTEasy, Maven, Apache Tomcat (7 and above)
 
-#Features:In this application basic create read update delete operations have been implemented and hosted via separate URI requests using rest easy API. Below are the features and its URI
+# Features:
+   In this application basic create read update delete operations have been implemented and hosted via separate URI requests  using rest easy API. Below are the features and its URI
 
-#GET: http://localhost:8080/ServicesApi/user
+# Get all the users
+  GET: http://localhost:8080/ServicesApi/user
 
-#POST: http://localhost:8080/ServicesApi/user
-#Requires JSON input in the below format
-#{"firstName":"value",
-#"lastName":"value"}
+# Get specific user details
+  GET: http://localhost:8080/ServicesApi/user/{id}
 
-#PUT: http://localhost:8080/ServicesApi/user/2
-#Requires JSON input in the below format
-#{"id":value,
-#"firstName":"value",
-#"lastName":"value"}
+# Add a New User
+  POST: http://localhost:8080/ServicesApi/user
+  ## Sampel Request Header and Body
+      Request Header 
+        Content-Type: application/json
+      JSON Request Body
+        {
+          "firstName":"value",
+          "lastName":"value"
+        }
+# Update User details
+  PUT: http://localhost:8080/ServicesApi/user/2
+  ## Sampel Request Header and Body
+      Request Header 
+        Content-Type: application/json
+      JSON Request Body
+        {
+          "id":value,
+          "firstName":"value",
+          "lastName":"value"
+         }
 
-#DELETE: http://localhost:8080/ServicesApi/user/2
+# Delete User
+  DELETE: http://localhost:8080/ServicesApi/user/2
 
-#To keep things simple and to run the application easily ,i have used a hashmap in DAO layer to store the USER objects instead of a Database.
+# Installation:
+  ## In order to run this project below software is required
+    Java 8
+    Tomcat version 7 and above 
 
+# API Reference - Jackson RESTEasy
 
-#Installation:
-#In order to run this project below software is required
-
-#Java 8
-#Tomcat version 7 and above 
-
-#API Reference
-#Jackson resteasy
-
-#How to use:
-
-#download the project from git hub repository
-#https://github.com/pratinya/newtonx_services
-#Use eclipse IDE, java 8 & tomcat 7 and above version to run the project on your local machine.
-#Once the application starts ,please use above mentioned URI's in features section to launch application and perform CRUD operations.
-
-
-
-
-
+# How to use:
+  Download the project from git hub repository from https://github.com/pratinya/newtonx_services
+  Use eclipse IDE, java 8 & tomcat 7 and above version to run the project on your local machine.
+  Once the application starts ,please use above mentioned URI's in features section to launch application and perform CRUD operations.
+ 
+ # Note
+  HashMap is used in DAO layer to store the USER objects in memory instead of a Database. It is just to avoid external datatabase dependencies during the setup and execution.
